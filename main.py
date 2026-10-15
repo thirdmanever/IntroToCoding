@@ -23,7 +23,6 @@ print("loading...")
 for i in range(10):   
     time.sleep(2)
     clearConsole()
-
     remaining = 10 - i
     print(f"Chances spent:{i} | chances left: {remaining}")
     print (f"$$$ = ({money})")
@@ -36,9 +35,9 @@ for i in range(10):
     choice = input(f"What color do you want to bet on? ({Red} {Or} {Black}{space}\n")
     Fore.RED + "Red" + Fore.RESET + "or" 
 
-    for i in range(1,100):
-        clearConsole()
-        rand = random.randint(1,48)
+    
+    clearConsole()
+    rand = random.randint(1,48)
     
     if rand%2 == 1:
         print(Fore.RED + str(rand))

@@ -2,62 +2,90 @@ import random
 import time
 from colorama import Fore, init
 import os
-
 def clearConsole():
     os.system('cls' if os.name == 'nt' else 'clear')
 clearConsole()
 init()
-# Fore.RED to make text red
-# BACK.RESET to make text black
 money = int(10)
-print ("You have 10 chances to make 1000 $$$")
-time.sleep(2)
-clearConsole()
-print("Go!")
-time.sleep(1)
-clearConsole()
+print ("   _____     ")
+print ("  /  1  \     ")
+print (" | 4   2 |    ")
+print ("  \__3__/     ")
+while True:
 
-win = True
-lose = False
-print("loading...")
-for i in range(10):   
-    time.sleep(2)
-    clearConsole()
-
-
-    remaining = 10 - i
-    print(f"Chances spent:{i} | chances left: {remaining}")
     print (f"$$$ = ({money})")
-    roulette = ["red","blue"]
+    roulette = ["1","2","3","4"]
     ans = random.choice(roulette)
-    Red = Fore.RED + "Red"
-    Or = Fore.RESET + "or" 
-    Black = Fore.BLUE + "Blue"
-    space = Fore.RESET + ")"
-    choice = input(f"What color do you want to bet on? ({Red} {Or} {Black}{space}\n")
-    Fore.RED + "Red" + Fore.RESET + "or" 
+    choice = input("What number do you want to bet on? (1,2,3,4)\n")
+    clearConsole()
+    for i in range(5):
+        print ("   _____     ")
+        print ("  /  o  \     ")
+        print (" | 4 | 2 |    ")
+        print ("  \__3__/     ")
 
-    for i in range(1,100):
+        time.sleep(.1)
         clearConsole()
-        rand = random.randint(1,48)
-    
-    if rand%2 == 1:
-        print(Fore.RED + str(rand))
-    else:
-        print(Fore.BLUE + str(rand))
-    
+
+        print ("   _____     ")
+        print ("  /  1  \     ")
+        print (" | 4 / 2 |    ")
+        print ("  \__3__/     ")
+
+        time.sleep(.1)
+        clearConsole()
+
+        print ("   _____     ") 
+        print ("  /  1  \     ")
+        print (" | 4 - o |    ")
+        print ("  \__3__/     ")
+
+        time.sleep(.1)
+        clearConsole()
+
+        print ("   _____     ")
+        print ("  /  1  \     ")
+        print (" | 4 \ 2 |    ")
+        print ("  \__3__/     ")
+
+        time.sleep(.1)
+        clearConsole()
+
+        print ("   _____     ")
+        print ("  /  1  \     ")
+        print (" | 4 | 2 |    ")
+        print ("  \__o__/     ")
+
+        time.sleep(.1)
+        clearConsole()
+
+        print ("   _____     ")
+        print ("  /  1  \     ")
+        print (" | 4 / 2 |    ")
+        print ("  \__3__/     ")
+
+        time.sleep(.1)
+        clearConsole()
+
+        print ("   _____     ") 
+        print ("  /  1  \     ")
+        print (" | o - 2 |    ")
+        print ("  \__3__/     ")
+
+        time.sleep(.1)
+        clearConsole()
+
+        print ("   _____     ")
+        print ("  /  1  \     ")
+        print (" | 4 \ 2 |    ")
+        print ("  \__3__/     ")
+
+        time.sleep(.1)
+        clearConsole()
+    rand = random.randint(1,4)
     if ans == choice:
         print("Win")
         money *=2
     else:
-       print("Lose")
-       money *=2    
-    print(Fore.RESET)
-print ("you lose  :(")
-if money == 100:
-    clearConsole()
-    Print ("you win! :D")
-    time.sleep(10)
-    clearConsole()
-
-
+        print("Lose")
+        money /=2    
