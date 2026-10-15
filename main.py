@@ -51,7 +51,7 @@ for i in range(10):
         money *=2
     else:
        print("Lose")
-       money *=2    
+       money /=2    
     print(Fore.RESET)
 print ("you lose  :(")
 if money == 100:
