@@ -24,7 +24,6 @@ for i in range(10):
     time.sleep(2)
     clearConsole()
 
-
     remaining = 10 - i
     print(f"Chances spent:{i} | chances left: {remaining}")
     print (f"$$$ = ({money})")
